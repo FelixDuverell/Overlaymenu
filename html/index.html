@@ -8,33 +8,35 @@
     <script src="https://kit.fontawesome.com/05341947df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/index.css">
-    <title>Overlaymenu</title>
+    <title>Mobilemenu</title>
 </head>
 <body>
-    <div class="navbar" id="navbar-mobile">
+    <div class="navbar">
         <nav>
             <h2 class="logo">K<span>-2D</span></h2>
-            <div class="navbar-links">
+            <div class="topnav" id="navbar-mobile">
                 <ul>
+                    <li class="btn" onclick="dropDownMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                    </li>
+
                     <li class="list"><a href="#">Home</a></li>
                     <li class="list"><a href="#">About</a></li>
                     <li class="list"><a href="#">Contacts</a></li>
-
-                    <button class="btn" onclick="dropDownMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
                 </ul>
             </div>
         </nav>
     </div>
 
+
+
     <script>
         function dropDownMenu() {
-            let hamburger = document.getElementById("navbar-mobile");
-            if (hamburger.className === "navbar") {
-            hamburger.className += " responsive";
+            var x = document.getElementById("navbar-mobile");
+            if (x.className === "topnav") {
+            x.className += " responsive";
             } else {
-            hamburger.className = "navbar-menu";
+            x.className = "topnav";
         }
         }
     </script>
